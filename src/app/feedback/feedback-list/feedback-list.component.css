@@ -1,0 +1,71 @@
+/*
+mat-expansion-panel {
+  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 15%;
+
+}
+
+.feedback-edit-btn {
+    text-decoration: none;
+    text-align: center;
+    margin-left: 3px;
+}
+
+.info-text {
+  text-align: center;
+}
+
+mat-spinner {
+  margin: auto;
+}
+
+mat-paginator {
+    margin-top: 1rem;
+} */
+
+/* :host {
+  display: block;
+  margin-top: 2rem;
+} */
+
+.card {
+  position: relative;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  margin-bottom: 10px;
+}
+
+mat-spinner {
+  margin: auto;
+}
+.info-text {
+  text-align: center;
+}
+
+/* .rounded-circle {
+  width: 60%;
+  margin-right: auto;
+  margin-left: 20%;
+  margin-top: 15%;
+  margin-bottom: 1rem;
+}
+
+.featurette {
+  width: 60%;
+  box-shadow: .3px .3px 1.25px rgba(0, 0, 0, 0.2);
+  margin: 15px;
+  margin-left: 20%;
+}
+.featurette-heading {
+  margin-top: 1rem;
+} */

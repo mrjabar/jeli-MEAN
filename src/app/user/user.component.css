@@ -1,0 +1,114 @@
+/* ********************************************** */
+
+/* mat-toolbar{
+  display: flex;
+  flex-wrap: wrap ;
+  align-items: center;
+  justify-content: space-between;
+  background-color: orange;
+  border-bottom: 5px solid #f39c12;;
+}
+
+.mat-toolbar  {
+  background: #1f3a93;
+  color: #fff;
+}
+
+.header_logo {
+  margin-top: 10px;
+  width: 70px;
+  height: 60px;
+}
+mat-menu {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.header-login {
+  border: 1px solid orange;
+}
+.header-signup {
+  border: 1px solid orange;
+  background-color: white;
+}
+
+.dropdown-item{
+  color: black;
+}
+
+.dropdown-item:hover{
+  color: black;
+}
+
+
+li {
+  list-style: none;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+li:hover {
+  color: orange;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+}
+a:hover {
+  color: orange;
+}
+
+.spacer {
+  flex: 1 1 auto;
+} */
+
+.row {
+  margin-top: 5rem;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: row;
+  margin-top: -45px;
+  margin-left: 105px;
+
+  /* margin: 15px 0; */
+}
+
+.example-radio-button {
+  /* margin-top: 15px; */
+  margin: 15px;
+
+}
+
+/* mat-card {
+  top: 2rem;
+} */
+
+mat-form-field {
+    width: 100%;
+}
+input[type="file"] {
+    visibility: hidden;
+}
+
+.image-preview {
+    height: 10rem;
+    margin: 1rem 0;
+}
+
+.image-preview img{
+    height: 100%;
+}

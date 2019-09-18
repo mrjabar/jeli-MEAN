@@ -1,0 +1,22 @@
+.container {
+  margin-top: 5rem;
+}
+
+.fa, .far, .fas {
+    font-size: xxx-large;
+    font-family: "Font Awesome 5 Free";
+    font-size: -webkit-xxx-large;
+}
+
+form {
+  margin-left: 25%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+button {
+  width: 100%;
+  padding: 10px;
+}
+

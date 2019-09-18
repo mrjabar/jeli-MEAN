@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-sidebar></app-sidebar>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+      >
+        <h1 class="h2">Dashboard</h1>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card text-white bg-secondary md-3">
+            <div class="card-body">
+              <p class="card-text d-flex justify-content-around">
+                <i class="fas fa-5x fa-box"></i
+                ><span class="statsNum">{{ orders.length }}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-white bg-success md-3">
+            <div class="card-body">
+              <p class="card-text d-flex justify-content-around">
+                <i class="fas fa-5x fa-money-bill-alt"></i
+                ><span class="statsNum">{{
+                  totalEarnings(orders) | currency
+                }}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-white bg-info md-3">
+            <div class="card-body">
+              <p class="card-text d-flex justify-content-around">
+                <i class="fas fa-5x fa-sticky-note"></i
+                ><span class="statsNum">{{ totalItems(orders) }}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container">
+    <app-sidebar></app-sidebar>
+
+  <h1>User Dashboard</h1>
+  <p>
+    <!-- <a routerLink="/admin/courses/new" class="btn btn-primary">New Course</a> -->
+    <a routerLink="/admin/users/new" mat-raised-button color="accent">New User</a>
+  </p>
+  <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search...">
+    </mat-form-field>
+    <div class="example-container mat-elevation-z8">
+        <mat-table [dataSource]="dataSource" matSort>
+          <ng-container matColumnDef="fullName">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Full Name</mat-header-cell >
+            <mat-cell *matCellDef="let user"> {{ user.fullName }} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Email </mat-header-cell >
+            <mat-cell *matCellDef="let user"> {{ user.email }} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="isAdmin">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Admin Role </mat-header-cell >
+            <mat-cell *matCellDef="let user"> {{ user.isAdmin }} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="username">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Username </mat-header-cell >
+            <mat-cell *matCellDef="let user"> {{ user.username }} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="contact">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Phone Number</mat-header-cell>
+            <mat-cell *matCellDef="let user"> {{user.contact}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="action" >
+            <th mat-header-cell *matHeaderCellDef > Action</th>
+            <td mat-cell *matCellDef="let user">
+              <span matTooltip="Edit">
+                <i class="fas fa-edit"  [routerLink]="['/admin/users', user.id]"></i>
+              </span>
+              <span matTooltip="Delete">
+                <i class="fas fa-trash-alt" (click)="onDelete(user.id)"></i>
+              </span>
+            </td>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+          <mat-row *matRowDef="let user; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+      <mat-paginator [pageIndex]="0" [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
+
+

@@ -1,0 +1,82 @@
+.container {
+  margin-top: 2rem;
+  width: 80%;
+  /* padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto; */
+  margin-left: 18%;
+  margin-bottom: 30px;
+}
+
+[role="main"][_ngcontent-jtu-c3] {
+  padding-top: 80px;
+}
+
+body {
+  font-size: .875rem;
+}
+
+/* .row {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding: 10px;
+} */
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card-title-address {
+  margin-bottom: .75rem;
+}
+
+.card-title-items {
+  margin-bottom: .75rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.fa-trash-alt {
+  color: rgb(199, 34, 34);
+  float: right;
+}
+
+
+/*
+ * Content
+ */
+ .pt-3, .py-3 {
+  padding-top: 2rem!important;
+}
+
+[role="main"] {
+  padding-top: 100px; /* Space for fixed navbar */
+}
+
+@media (min-width: 768px) {
+  [role="main"] {
+    padding-top: 48px; /* Space for fixed navbar */
+  }
+}
+
+/* @media (min-width: 576px){
+  .container {
+    max-width: 540px;
+}
+} */

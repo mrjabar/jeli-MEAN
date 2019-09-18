@@ -1,0 +1,62 @@
+.container {
+  margin-top: 5rem;
+  margin-left: 18%;
+  width: 81%;
+
+}
+
+.example-container {
+  height: 400px;
+  overflow: auto;
+}
+
+.mat-form-field {
+  font-size: 12px;
+  width: 100%;
+}
+
+.fa-trash-alt {
+  color: rgb(199, 34, 34);
+}
+
+.fa-edit {
+  color: navy;
+}
+
+table {
+  width: 800px;
+}
+
+
+td.mat-column-action{
+  width: 75px;
+  padding-right: 50px;
+}
+
+/* Row data */
+mat-cell.mat-column-fullName, mat-cell.mat-column-email,
+mat-cell.mat-column-username, mat-cell.mat-column-contact {
+  width: 30%;
+  padding-right: 20px;
+}
+
+/* Row header */
+mat-header-cell.mat-column-fullName, mat-header-cell.mat-column-email,
+mat-header-cell.mat-column-username, mat-header-cell.mat-column-contact {
+  width: 20px;
+  padding-left: 1.5rem;
+}
+
+th.mat-column-action{
+  padding-left: 25px;
+}
+
+.mat-sort-header-arrow, [dir=rtl] .mat-sort-header-position-before .mat-sort-header-arrow {
+  margin: 0 0 0 140px;
+}
+
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+  padding: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: none;
+}

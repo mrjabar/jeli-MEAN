@@ -1,0 +1,113 @@
+.container-fluid {
+  margin-top: 5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+}
+/* .topbar {
+  padding: 15px 20px;
+  background-color: #2196f3;
+  color: #fff;
+  font-size: 1.2em;
+} */
+
+.chatarea {
+  flex-grow: 1;
+  background-color: #e0e0e0;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chatarea .chat {
+  margin: 4px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.chatarea .chat.me p {
+  background-color: #fff;
+}
+
+.chatarea .chat p {
+  background-color: #BBDEFB;
+  display: inline;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.chatarea .chat.notify p {
+  background-color: transparent;
+  color: grey;
+  font-size: 0.8em;
+  font-weight: bold;
+  box-shadow: none;
+}
+
+.chatarea .chat p .username {
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.inputarea form {
+  padding: 10px 0 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.inputarea .textbox {
+  flex-grow: 1;
+  width: 100%;
+  display: block;
+  border: 0;
+  font-size: 1.2em;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.inputarea .textbox:focus {
+  outline: 0;
+  border-color: 2px solid #2196F3;
+}
+
+.inputarea .sendButton {
+  padding: 7px 10px;
+  color: #2196F3;
+  border: 0;
+  font-size: 1em;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.inputarea .sendButton:focus {
+  outline: 0;
+}
+
+.usernamebox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+}
+
+.usernamebox .user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+.usernamebox .user form {
+  text-align: center;
+}
+
+

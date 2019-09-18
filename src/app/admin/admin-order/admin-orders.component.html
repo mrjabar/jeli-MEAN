@@ -1,0 +1,98 @@
+<app-sidebar></app-sidebar>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div
+    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+  >
+    <h1 class="h2">All Orders</h1>
+  </div>
+</main>
+<!-- <div class="admin-order">
+  <app-order></app-order>
+</div> -->
+
+<div class="container">
+  <!-- <br /><br /> -->
+  <div class="row">
+    <div class="col">
+      <div class="card text-white bg-secondary md-3">
+        <div class="card-body">
+          <p class="card-text d-flex justify-content-around">
+            <i class="fas fa-5x fa-box"></i><span class="statsNum">{{orders.length}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-white bg-success md-3">
+        <div class="card-body">
+          <p class="card-text d-flex justify-content-around">
+            <i class="fas fa-5x fa-money-bill-alt"></i
+            ><span class="statsNum">{{totalEarnings(orders) | currency}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-white bg-info md-3">
+        <div class="card-body">
+          <p class="card-text d-flex justify-content-around">
+            <i class="fas fa-5x fa-sticky-note"></i
+            ><span class="statsNum">{{totalItems(orders)}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mt-2" *ngFor="let order of orders">
+    <div class="card-body p-0 pl-3">
+      <div class="row">
+        <div class="col d-flex flex-column justify-content-center">
+            <h5 class="card-title-address">Address</h5>
+            <p class="card-text">
+              Name: {{order.firstName}} {{order.lastName}}<br />
+              Address: {{order.addressOne}}<br />
+              Address: {{order.addressTwo}}<br />
+              {{order.country}}<br />
+            </p>
+          </div>
+          <div class="col">
+            <h5 class="card-title-items">Order Items</h5>
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let item of order.items">{{item?.name}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        <p>
+          Order Id: {{order._id}}
+          <span matTooltip="Delete" class="pull-right">
+              <!-- <button (click)="onDelete(course.id)">
+                    delete
+              </button> -->
+              <i class="fas fa-trash-alt" (click)="onDelete(order.id)"></i>
+            </span><br/>
+        </p>
+          <b>
+            Total :{{orderTotal(order.items) | currency}}
+          </b>
+      </div>
+
+        <!-- <div class="card-footer d-flex justify-content-between pull-right">
+            <b>
+              Total :{{orderTotal(order.items) | currency}}
+              <span matTooltip="Delete">
+                  <button (click)="onDelete(course.id)">
+                        delete
+                  </button>
+                  <i class="fas fa-trash-alt" (click)="onDelete(course.id)"></i>
+                </span>
+
+            </b>
+
+          </div>
+ -->
+    </div>
+</div>
+
+

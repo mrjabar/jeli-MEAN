@@ -1,0 +1,131 @@
+<div class="container marketing">
+    <i class="far fa-envelope text-muted"></i>
+  <div class="row featurette">
+
+    <div class="col-md-6" *ngFor="let c of contactus">
+        <hr class="featurette-divider" />
+
+      <h2 class="featurette-heading">
+          CONTACT US
+          <h4 class="text-muted">{{c.title}}</h4>
+        </h2>
+        <p class="lead">{{c.content}}</p>
+      </div>
+      <!-- <div class="col-md-6">
+          <form (submit)="onSaveContactInfo(contactUsForm)" #contactUsForm="ngForm">
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                name="firstName"
+                ngModel
+                required
+                minlength="3"
+                placeholder="First Name"
+                #firstName="ngModel"
+              />
+              <mat-error *ngIf="firstName.invalid"
+                >Please enter your first name.</mat-error
+              >
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  name="lastName"
+                  ngModel
+                  required
+                  minlength="3"
+                  placeholder="Last Name"
+                  #lastName="ngModel"
+                />
+                <mat-error *ngIf="lastName.invalid"
+                  >Please enter your last name</mat-error
+                >
+              </mat-form-field>
+              <br>
+            <mat-form-field>
+              <input
+                matInput
+                type="email"
+                name="email"
+                ngModel
+                required
+                minlength="3"
+                placeholder="Email"
+                #email="ngModel"
+              />
+              <mat-error *ngIf="email.invalid"
+                >Please enter your email.</mat-error
+              >
+            </mat-form-field>
+            <br>
+            <button mat-raised-button color="accent" type="submit">Submit</button>
+          </form>
+      </div> -->
+
+        <!-- <div class="col-md-6"> -->
+  </div>
+  <div class="col-md-5">
+      <img
+        class="featurette-image img-fluid mx-auto"
+        role="img"
+        aria-label="Placeholder: 500x500"
+        src="assets/images/skyline.jpg"
+      />
+    </div>
+    <div class="col-md-7">
+        <form (submit)="onSave(contactFormData)" #contactFormData="ngForm">
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              name="title"
+              ngModel
+              required
+              minlength="3"
+              placeholder="Contact Us Title"
+              #title="ngModel"
+            />
+            <mat-error *ngIf="title.invalid"
+              >Please enter a title</mat-error
+            >
+          </mat-form-field>
+          <br>
+          <!-- <mat-form-field>
+            <input
+              matInput
+              type="text"
+              name="description"
+              ngModel
+              required
+              minlength="3"
+              placeholder="Contact Us description"
+              #description="ngModel"
+            />
+            <mat-error *ngIf="description.invalid"
+              >Please enter a post title.</mat-error
+            >
+          </mat-form-field> -->
+          <br>
+          <mat-form-field>
+            <textarea
+              matInput
+              rows="4"
+              name="content"
+              ngModel
+              required
+              placeholder="Enter contact us details ..."
+              #content="ngModel">
+            </textarea>
+            <mat-error *ngIf="content.invalid">Please enter some content...</mat-error>
+          </mat-form-field>
+          <br>
+          <br>
+          <button mat-raised-button color="accent" type="submit">Submit</button>
+        </form>
+    </div>
+
+
+</div>

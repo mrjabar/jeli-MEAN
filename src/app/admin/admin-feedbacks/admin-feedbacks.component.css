@@ -1,0 +1,25 @@
+body {
+  font-size: .875rem;
+}
+
+/*
+ * Content
+ */
+ .pt-3, .py-3 {
+  padding-top: 2rem!important;
+}
+
+.order-feedback {
+  width: 80%;
+  margin-left: 18%;
+}
+[role="main"] {
+  padding-top: 100px; /* Space for fixed navbar */
+}
+
+@media (min-width: 768px) {
+  [role="main"] {
+    padding-top: 48px; /* Space for fixed navbar */
+  }
+}
+

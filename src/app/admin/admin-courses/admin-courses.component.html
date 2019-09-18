@@ -1,0 +1,53 @@
+<div class="container">
+    <app-sidebar></app-sidebar>
+
+  <h1>Course Dashboard</h1>
+  <p>
+    <!-- <a routerLink="/admin/courses/new" class="btn btn-primary">New Course</a> -->
+    <a routerLink="/admin/courses/new" mat-raised-button color="accent">New Course</a>
+  </p>
+  <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search...">
+    </mat-form-field>
+    <div class="example-container mat-elevation-z8">
+        <mat-table [dataSource]="dataSource" matSort>
+          <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell >
+              <mat-cell *matCellDef="let course"> {{ course.name }} </mat-cell>
+
+            <!-- <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell> -->
+            <!-- <mat-cell *matCellDef="let course"> {{ course.name }} </mat-cell> -->
+          </ng-container>
+          <ng-container matColumnDef="price">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Price</mat-header-cell>
+            <mat-cell *matCellDef="let course"> {{course.price | currency: 'USD'}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="action" >
+            <th mat-header-cell *matHeaderCellDef > Action</th>
+            <td mat-cell *matCellDef="let course">
+              <span matTooltip="Edit">
+                <!-- <a class="course-edit-btn" [routerLink]="['/admin/edit', course.id]">
+                  edit
+                </a> -->
+                <i class="fas fa-edit"  [routerLink]="['/admin/courses', course.id]"></i>
+              </span>
+            <!-- </td>
+            <td mat-cell *matCellDef="let course"> -->
+              <span matTooltip="Delete">
+                <!-- <button (click)="onDelete(course.id)">
+                      delete
+                </button> -->
+                <i class="fas fa-trash-alt" (click)="onDelete(course.id)"></i>
+              </span>
+            </td>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+          <mat-row *matRowDef="let course; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+      <mat-paginator [pageIndex]="0" [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
+
+

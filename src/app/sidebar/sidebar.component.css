@@ -1,0 +1,117 @@
+.heading {
+    margin-top: 250px;
+}
+
+body {
+    font-size: .875rem;
+
+  }
+  .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+}
+  .feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+  }
+
+  .fa-home {
+    margin-left: 44%;
+    margin-bottom: 1rem;
+    font-size: 25px;
+  }
+  /*
+   * Sidebar
+   */
+  .rounded-circle {
+      height: 100px;
+      width: 100px;
+      margin: auto;
+    margin-bottom: 1rem;
+  }
+  .avatar {
+      text-align: center;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  }
+
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 3rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+      position: -webkit-sticky;
+      position: sticky;
+    }
+  }
+
+  .sidebar .nav-link {
+    font-weight: 400;
+    color: #1f3a93;
+  }
+
+  .sidebar .nav-link .feather {
+    margin-right: 4px;
+    background: #1f3a93;
+  }
+
+  .sidebar .nav-link.active {
+    color: #007bff;
+  }
+
+  .sidebar .nav-link:hover .feather,
+  .sidebar .nav-link.active .feather {
+    color: inherit;
+  }
+
+  .sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+
+  /*
+   * Content
+   */
+
+  [role="main"] {
+    padding-top: 133px; /* Space for fixed navbar */
+  }
+
+  @media (min-width: 768px) {
+    [role="main"] {
+      padding-top: 48px; /* Space for fixed navbar */
+    }
+  }
+
+  .h2 {
+    font-weight: 400;
+
+  }
+
+  h6{
+      text-align: center;
+      font-weight: 200;
+  }
+
+
+  input[type="file"] {
+      visibility: hidden;
+  }

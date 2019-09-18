@@ -1,0 +1,55 @@
+.container {
+  margin-top: -2rem;
+}
+
+.fa, .far, .fas {
+    font-size: xxx-large;
+    font-family: "Font Awesome 5 Free";
+    font-size: -webkit-xxx-large;
+}
+
+/* form {
+  margin-left: 25%;
+} */
+
+.contact-form {
+  background-color: #1f3a93;
+  border-radius: 2px;
+  color: #f39c12;
+  font-size: 1rem;
+  padding: 15px;
+}
+mat-form-field {
+  width: 100%;
+}
+button {
+  width: 100%;
+  padding: 10px;
+}
+
+.featurette-heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1f3a93;
+}
+
+.contactus-header {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.lead {
+  font-size: 1rem;
+}
+
+form {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #D3D3D3;
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px #D3D3D3;
+  z-index: -1;
+  /* margin-left: 12.5%;
+  margin-right: 12.5%; */
+  margin-top: 1rem;
+}

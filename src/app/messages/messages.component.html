@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  <div>
+    <h2 class="forum-heading">{{title}}</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div  class="btn btn-primary btn-block" (click)="join()">Join</div>
+    </div>
+    <div class="col-sm-6">
+      <div >
+        <input type="text" [(ngModel)]="user" class="form-control" id="username" placeholder="Enter Username"><br>
+      </div>
+    </div>
+    <!-- <div class="col-md-3">
+      </div> -->
+      <div class="col-md-3">
+          <div  >
+              <div  class="btn btn-danger btn-block">Leave</div>
+            </div>
+
+      </div>
+  </div>
+  <div *ngIf="username" class="chatarea">
+      <div style="min-height: 0; overflow: scroll" id="scrolldiv">
+      <div *ngFor="let chat of chats; let i = index" class="chat" [class.notify]="chat.type == 'notify'" [class.me]="chat.user == username">
+        <p><span class="username">{{chat.user}}</span>{{chat.message}}</p>
+      </div>
+      </div>
+    </div>
+        <div class="inputarea">
+      <form (submit)="addChat()">
+        <input class="textbox" name="message" [(ngModel)]="message" type="text" autofocus autocomplete="off">
+        <button type="submit" class="sendButton">Send</button>
+      </form>
+      <!-- <form (submit)="addChat()">
+          <input class="textbox" name="message" [(ngModel)]="message" type="text" autofocus autocomplete="off">
+          <button type="submit" class="sendButton">Send</button>
+        </form> -->
+      </div>
+</div>
+
+<!-- <div class="container">
+    <div *ngIf="!username" class="usernamebox">
+      <div class="user">
+        <p style="padding-bottom: 10px; font-weight: bold">Who are you?</p>
+        <form (submit)="addUser(user)">
+            <input type="text" name="user" [(ngModel)]="user"><br>
+            <button type="submit">Join Chat</button>
+        </form>
+      </div>
+    </div>
+    <div *ngIf="username" class="chatarea">
+      <div style="min-height: 0; overflow: scroll" id="scrolldiv">
+      <div *ngFor="let chat of chats; let i = index" class="chat" [class.notify]="chat.type == 'notify'" [class.me]="chat.user == username">
+        <p><span class="username">{{chat.user}}</span>{{chat.message}}</p>
+      </div>
+      </div>
+    </div>
+    <div *ngIf="username" class="inputarea">
+      <form (submit)="addChat()">
+        <input class="textbox" name="message" [(ngModel)]="message" type="text" autofocus autocomplete="off">
+        <button type="submit" class="sendButton">Send</button>
+      </form>
+    </div>
+  </div>
+ -->

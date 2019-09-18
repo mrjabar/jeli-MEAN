@@ -1,0 +1,93 @@
+<div class="fullpage">
+  <div class="text-center register-container">
+    <form class="form-register" (submit)="onRegister(registerForm)" #registerForm="ngForm">
+      <p class="h3 mb-3 font-weight-normal">Register</p>
+      <!-- <div class="text-center mb-4">
+          <img class="mb-4" src="assets/images/Jeli_logo.jpg" alt="" width="72" height="72">
+      </div> -->
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          required=""
+          autofocus=""
+          placeholder="Full Name"
+          name="fullName"
+          ngModel
+          #fullName="ngModel"
+        />
+      </div>
+      <br>
+      <div>
+        <!-- <label for="inputEmail" class="sr-only">Email</label> -->
+        <input
+          type="email"
+          class="form-control"
+          required=""
+          autofocus=""
+          placeholder="Email"
+          name="email"
+          ngModel
+          #email="ngModel"
+        />
+      </div>
+      <br>
+      <div>
+        <!-- <label for="inputEmail" class="sr-only">Email</label> -->
+        <input
+          type="text"
+          class="form-control"
+          required=""
+          autofocus=""
+          placeholder="Username"
+          name="username"
+          ngModel
+          #username="ngModel"
+        />
+      </div>
+      <br>
+      <div>
+        <input
+          type="password"
+          class="form-control"
+          required=""
+          name="password"
+          placeholder="Password"
+          ngModel
+          #password="ngModel"
+        />
+      </div>
+      <br>
+
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          required=""
+          autofocus=""
+          placeholder="Phone Number"
+          name="contact"
+          ngModel
+          #contact="ngModel"
+        />
+      </div>
+      <br>
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          required=""
+          name="adminCode"
+          placeholder="Admin Code"
+          ngModel
+          #adminCode="ngModel"
+        />
+      </div>
+
+      <button type="submit" *ngIf="!isLoading" [disabled]="!registerForm.form.valid" class="mt-3 btn btn-lg btn-success btn-block">
+        Register
+      </button>
+      <mat-spinner  *ngIf="isLoading" color="accent"></mat-spinner>
+    </form>
+  </div>
+</div>

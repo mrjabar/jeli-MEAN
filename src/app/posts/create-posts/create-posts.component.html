@@ -1,0 +1,110 @@
+<!-- <div class="container-fluid"> -->
+<div class="row">
+  <div class=" wrapper">
+    <div class="user_details column">
+      <a routerLink="/user/profile">
+        <img src="assets/images/profile1.jpg" class="profile_pic" alt="">
+      </a>
+      <div class="user_details_left_right">
+          <a routerLink="/user/profile">
+            {{fullName}}
+          </a>
+      </div>
+    </div>
+    <!-- <div class="col-md-6"> -->
+    <div class="main_column column">
+      <form (submit)="onSavePost(postForm)" #postForm="ngForm">
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            name="title"
+            ngModel
+            required
+            minlength="3"
+            placeholder="Post Title"
+            #title="ngModel"
+          />
+          <mat-error *ngIf="title.invalid"
+            >Please enter a post title.</mat-error
+          >
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <textarea
+            matInput
+            rows="4"
+            name="content"
+            ngModel
+            required
+            placeholder="Got something to say..."
+            #content="ngModel">
+          </textarea>
+          <mat-error *ngIf="content.invalid">Please enter a post title.</mat-error>
+        </mat-form-field>
+        <br>
+        <br>
+        <button mat-raised-button color="accent" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+    <app-list-posts></app-list-posts>
+
+
+
+    <!-- <mat-card>
+        <form (submit)="onSavePost(postForm)" #postForm="ngForm">
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              name="title"
+              ngModel
+              required
+              minlength="3"
+              placeholder="Post Title"
+              #title="ngModel">
+            <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <textarea
+              matInput
+              rows="4"
+              name="content"
+              ngModel
+              required
+              placeholder="Post Content"
+              #content="ngModel"></textarea>
+            <mat-error *ngIf="content.invalid">Please enter a post title.</mat-error>
+          </mat-form-field>
+          <button
+            mat-raised-button
+            color="accent"
+            type="submit">Save Post</button>
+        </form>
+      </mat-card>
+
+<!-- <div class="container">
+  <div class="col-md-2">
+    <div style="margin-top: 1.2rem;" class="pull-right">
+      <div  class="btn btn-primary">Post</div>
+      <div  class="btn btn-danger">Leave</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="well">
+      <span><strong>Username:</strong>This is rt</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-10">
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-sm-2">
+      <button class="btn btn-success pull-right">Send</button>
+    </div>
+  </div>
+
+</div> -->

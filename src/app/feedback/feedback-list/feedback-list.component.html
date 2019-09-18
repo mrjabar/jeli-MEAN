@@ -1,0 +1,86 @@
+<!-- <mat-spinner color="accent"></mat-spinner>
+<mat-accordion multi="true" *ngIf="feedbacks.length > 0 && !isLoading">
+    <mat-expansion-panel *ngFor="let feedback of feedbacks">
+      <mat-expansion-panel-header>
+        {{ feedback.title}}
+      </mat-expansion-panel-header>
+      <p>
+        {{ feedback.content }}
+        <br>
+      <br>
+      </p>
+      <mat-action-row>
+        <mat-form-field>
+          <input matInput [(ngModel)]="name">
+        </mat-form-field>
+        <button mat-button (click)="openDialog()"><mat-icon color="primary">insert_comment</mat-icon></button>
+            <span class="example-spacer"></span>
+            <a class="feedback-edit-btn" mat-button color="primary" [routerLink]="['/edit/feedback', feedback.id]">
+              <i class="fas fa-edit"></i>
+            </a>
+
+        <button mat-button color="warn" (click)="onDelete(feedback.id)">
+            <i class="fas fa-trash-alt "></i>
+
+        </button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-paginator
+    [length]="totalFeedbacks"
+    [pageSize]="feedbacksPerPage"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="onChangedPage($event)"
+    *ngIf="feedbacks.length > 0"></mat-paginator>
+  <p class="info-text mat-body-1" *ngIf="feedbacks.length <= 0 && !isLoading">No feedbacks added yet!</p> -->
+
+  <!-- <mat-spinner *ngIf="isLoading" color="accent"></mat-spinner> -->
+<!-- <div *ngIf="feedbacks.length > 0 && !isLoading">
+    <div class="row featurette" *ngFor="let feedback of feedbacks">
+        <div class="col-md-8 order-md-2">
+            <h5 class="featurette-heading">
+                {{ feedback.title }}
+                <span class="text-muted">See for yourself.</span>
+            </h5>
+            <p class="lead">
+                {{ feedback.content }}
+                <button  mat-button color="warn" (click)="onDelete(feedback.id)">
+                    <i class="fas fa-trash-alt "></i>
+                  </button>
+            </p>
+            <br>
+        </div> -->
+        <!-- <div class="col-md-4 order-md-1">
+            <img src="assets/eva.jpg" class="rounded-circle" alt="..." />
+        </div> -->
+        <!-- <div class="col-md-4 order-md-1">
+                <img
+                src="assets/images/eva.jpg"
+                class="rounded-circle image-responsive"
+            />
+        </div>
+
+    </div>
+</div>
+<p class="info-text mat-body-1" *ngIf="feedbacks.length <= 0 && !isLoading">No feedback added yet!</p> -->
+<div *ngIf="feedbacks.length > 0 && !isLoading">
+<div class="row" >
+    <div class="col-sm-4" *ngFor="let feedback of feedbacks">
+      <div class="card">
+          <div class="card-header">
+              <h5 class="card-title">
+
+                  <span class="text-muted">{{ feedback.title }}</span>
+              </h5>
+
+            </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+          <p class="card-text">{{ feedback.content }}</p>
+        <footer class="blockquote-footer">{{fullName}}</footer>
+    </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="info-text mat-body-1" *ngIf="feedbacks.length <= 0 && !isLoading">No feedback added yet!</p>

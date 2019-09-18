@@ -1,0 +1,70 @@
+<main role="main">
+  <section class="course-carousel-area">
+    <!-- <h3>New Courses</h3> -->
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-md-4 order-1">
+            <button class="btn btn-danger btn-lg btn-block" routerLink="/courses">Continue Shopping </button>
+        </div>
+
+        <!-- <div class="col-md-4"> -->
+            <div class="col-md-4 order-2" *ngIf="course">
+                <!-- <div class="col" *ngFor="let item of courses; index as courseId"> -->
+                  <!-- <h2 class="course-carousel-title">Our Latest Courses</h2> -->
+                  <div class="course-carousel">
+                    <div class="course-box-wrap shadow-sm">
+                        <div class="course-box shadow-sm">
+                          <div class="course-image">
+                            <img
+                              class="course-image image-responsive"
+                              [src]="course.imagePath"
+                              [alt]="course.name"
+                            />
+                          </div>
+                          <div class="course-details">
+                            <h5 class="title">{{ course?.name }}</h5>
+                            <p class="description">
+                              {{ course?.description }}
+                            </p>
+                            <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <span class="d-inline-block average-rating"></span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <h5 class="card-text">{{ course.price | currency }}</h5>
+                              <span matTooltip="Add to cart">
+                                  <button
+                                  type="button"
+                                  class="btn"
+                                  (click)="addItemToCart(course)"
+                                  [class.btn-outline-primary]="itemInCart(course).length"
+                                >
+                                  <i class="fas fa-shopping-cart"></i>
+                                </button>
+                              </span>
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+                <div class="col-md-4 order-3">
+                    <button class="btn btn-success btn-lg btn-block" routerLink="/checkout">Proceed to Checkout </button>
+                </div>
+
+
+        </div>
+
+      </div>
+    <!-- </div> -->
+  </section>
+</main>

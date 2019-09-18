@@ -1,0 +1,24 @@
+.row {
+  margin-top: 6rem;
+}
+
+input[type="text"] {
+  font-size: 13px;
+}
+
+textarea, .input-group-text {
+  font-size: 13px;
+}
+
+input[type="file"] {
+  visibility: hidden;
+}
+
+.image-preview {
+  height: 5rem;
+  margin: 1rem 0;
+}
+
+.image-preview img {
+  height: 100%;
+}

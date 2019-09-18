@@ -1,0 +1,25 @@
+<div class="container marketing">
+  <i class="far fa-envelope text-muted"></i>
+  <div class="row featurette">
+
+    <div class="col-md-7" *ngFor="let c of contactsus">
+        <hr class="featurette-divider" />
+
+      <h2 class="featurette-heading">
+          CONTACT US
+          <h4 class="contactus-header text-muted">{{c.title}}</h4>
+        </h2>
+        <p class="lead">{{c.content}}</p>
+      </div>
+      <div class="col-md-5 column">
+        <app-enquiry></app-enquiry>
+      </div>
+  </div>
+  <div class="row featurette">
+    <div class="col-md-6">
+      <hr class="featurette-divider" />
+    </div>
+    <div class="col-md-6 column">
+    </div>
+  </div>
+</div>

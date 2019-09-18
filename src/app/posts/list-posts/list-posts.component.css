@@ -1,0 +1,32 @@
+.row {
+  margin-top: 3rem;
+}
+
+mat-expansion-panel {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  text-align: left;
+  margin-left: 18%;
+}
+
+.post-edit-btn {
+    text-decoration: none;
+    text-align: center;
+    margin-left: 3px;
+}
+
+.info-text {
+  text-align: center;
+}
+
+mat-spinner {
+  margin: auto;
+}
+
+mat-paginator {
+    margin-top: 1rem;
+}

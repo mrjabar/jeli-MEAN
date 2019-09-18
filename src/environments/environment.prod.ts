@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: 'http://jayemonline-env.4ammjvgrqc.us-east-2.elasticbeanstalk.com/api'
 };
